@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="egovframework.healthper.test.TestMapper">
+	
+	<resultMap id="testLoginn" type="egovframework.healthper.test.TestVO">
+		<result property="testId" column="test_id"/>
+		<result property="testPw" column="test_pw"/>
+	</resultMap>
+	
+	<select id="testLogin" resultMap="testLoginn">
+		SELECT * FROM TEST WHERE TEST_ID=#{testId} AND TEST_PW=#{testPw}
+	</select>
+	
+</mapper>
