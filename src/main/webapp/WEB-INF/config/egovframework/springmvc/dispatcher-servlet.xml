@@ -33,7 +33,7 @@
     </bean>
 
     <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        <property name="defaultErrorView" value="cmmn/egovError"/>
+        <property name="defaultErrorView" value="cmmn/egovError"/> 
         <property name="exceptionMappings">
             <props>
                 <prop key="org.springframework.dao.DataAccessException">cmmn/dataAccessFailure</prop>
@@ -59,6 +59,11 @@
         </property>
     </bean>
 	<!-- /For Pagination Tag -->
-
+	<!-- jsonView -->
+    <bean id="beanNameResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0"/>
+    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+        <property name="contentType" value="application/json;charset=UTF-8"></property>
+    </bean>
+	
     <mvc:view-controller path="/cmmn/validator.do" view-name="cmmn/validator"/>
 </beans>
