@@ -48,6 +48,7 @@ public class CommonController {
 		return "/common/loginPage";
 	}
 	
+	
 	@RequestMapping("/ajaxLogin.do")
 	public ModelAndView ajaxLogin(HttpServletRequest request){
 		Map<String, Object> hashMap = new HashMap<>();

@@ -10,6 +10,7 @@
     <typeAliases>
 		<!-- 테스트 용 -->
 		<typeAlias alias="testVO" type="egovframework.healthper.test.TestVO"/>
-		
+		<!--  -->
+		<typeAlias alias="userVO" type="egovframework.healthper.vo.UserVO"/>
     </typeAliases>
 </configuration>

@@ -17,8 +17,13 @@
 	function modalLogin(){
 		var id = $("#userId").val();
 		var pw = $("#userPw").val();
+		var userKind = $('[name="userKind"]').val();
+		var urls = "";
+		if (userKind == "user"){urls = "./userLogin.do";}
+		else if(userKind == "trainer"){urls = "./trainerLogin.do";}
+		else{urls = "./ownerLogin.do";}
 		$.ajax({
-			url : "./ajaxLogin.do",
+			url : urls,
 			type : 'POST',
 			data : {"userId" : id, "userPw" : pw},
 			success : function(data){
