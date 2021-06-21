@@ -12,7 +12,7 @@
 		<typeAlias alias="testVO" type="egovframework.healthper.test.TestVO"/>
 		<!--  -->
 		<typeAlias alias="userVO" type="egovframework.healthper.vo.UserVO"/>
-		<typeAlias alias="userVO" type="egovframework.healthper.vo.TrainerVO"/>
-		<typeAlias alias="userVO" type="egovframework.healthper.vo.OwnerVO"/>
+		<typeAlias alias="trainerVO" type="egovframework.healthper.vo.TrainerVO"/>
+		<typeAlias alias="ownerVO" type="egovframework.healthper.vo.OwnerVO"/>
     </typeAliases>
 </configuration>
