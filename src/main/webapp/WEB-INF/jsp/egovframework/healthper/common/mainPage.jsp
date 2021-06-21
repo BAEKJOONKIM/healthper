@@ -22,6 +22,7 @@
 		if (userKind == "user"){urls = "./userLogin.do";}
 		else if(userKind == "trainer"){urls = "./trainerLogin.do";}
 		else{urls = "./ownerLogin.do";}
+		console.log(urls);
 		$.ajax({
 			url : urls,
 			type : 'POST',
@@ -105,6 +106,13 @@
         		<col style="width:50%">
         		<col>
         	</colgroup>
+        	<tr>
+        		<td>
+        			<input type="radio" name="userKind" value="user" checked="checked"/><label for="">회원</label>
+        			<input type="radio" name="userKind" value="trainer"/><label for="">트레이너</label>
+        			<input type="radio" name="userKind" value="owner"/><label for="">관장</label>
+        		</td>
+        	</tr>
         	<tr>
         		<th><label>id:</label></th>
         		<td><input type="text" id="userId"/></td>
