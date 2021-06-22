@@ -73,6 +73,8 @@ public class CommonController {
 		Map<String, Object> hashMap = new HashMap<>();
 		MemberVO mVO = new MemberVO();
 		
+		ModelAndView model = new ModelAndView("jsonView");
+		
 		String id = request.getParameter("userId");
 		String pw = request.getParameter("userPw");
 		String userKind = request.getParameter("userKind");
@@ -81,7 +83,13 @@ public class CommonController {
 			inVO.setMId(id);
 			inVO.setMPw(pw);
 			mVO = memberService.memberLogin(inVO);
-			hashMap.put("member", mVO);
+			if(mVO != null) {
+				model.addObject("member", mVO);
+				model.addObject("isLogin", "S");
+				model.addObject("userKind", "M");
+			}else {
+				model.addObject("isLogin", "F");
+			}
 		}else if(userKind.equals("trainer")) {
 			
 		}else if(userKind.equals("owner")){
@@ -92,8 +100,8 @@ public class CommonController {
 		
 		System.out.println(mVO.getMId() +" "+mVO.getMPw()+" "+userKind);
 		
-		ModelAndView model = new ModelAndView("jsonView");
-		model.addObject("user",hashMap);
+		
+		//model.addObject("user",hashMap);
 		return model;
 	}
 	

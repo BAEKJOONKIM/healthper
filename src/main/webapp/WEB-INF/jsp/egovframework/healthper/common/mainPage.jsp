@@ -19,12 +19,9 @@
 		var pw = $("#userPw").val();
 		var userKind = $('[name="userKind"]').val();
 		var urls = "";
-	//	if (userKind == "member"){urls = "./memberLogin.do";}
-	//	else if(userKind == "trainer"){urls = "./trainerLogin.do";}
-	//	else{urls = "./ownerLogin.do";}
 		console.log(urls);
 		$.ajax({
-			url : "./ajaxLogin.do",//urls,
+			url : "./ajaxLogin.do",
 			type : 'POST',
 			data : {userId : id, userPw : pw, userKind: userKind},
 			success : function(data){
