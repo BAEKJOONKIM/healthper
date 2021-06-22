@@ -11,7 +11,7 @@
 		<!-- 테스트 용 -->
 		<typeAlias alias="testVO" type="egovframework.healthper.test.TestVO"/>
 		<!-- VO -->
-		<typeAlias alias="userVO" type="egovframework.healthper.vo.UserVO"/>
+		<typeAlias alias="memberVO" type="egovframework.healthper.vo.MemberVO"/>
 		<typeAlias alias="trainerVO" type="egovframework.healthper.vo.TrainerVO"/>
 		<typeAlias alias="ownerVO" type="egovframework.healthper.vo.OwnerVO"/>
     </typeAliases>

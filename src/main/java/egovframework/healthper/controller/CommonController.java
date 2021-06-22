@@ -4,15 +4,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import egovframework.healthper.vo.UserVO;
+import egovframework.healthper.service.OwnerService;
+import egovframework.healthper.service.TrainerService;
+import egovframework.healthper.service.MemberService;
+import egovframework.healthper.vo.MemberVO;
 
 @Controller
 public class CommonController {
+	
+	@Autowired
+	private MemberController memberController;
+	@Autowired
+	private MemberService memberService;
+	@Autowired
+	private TrainerController trainerController;
+	@Autowired
+	private TrainerService trainerService;
+	@Autowired
+	private OwnerController onwerController;
+	@Autowired
+	private OwnerService ownerService;
 	
 	@RequestMapping("/index.do")
 	public String mainPage() {
@@ -50,13 +69,29 @@ public class CommonController {
 	
 	
 	@RequestMapping("/ajaxLogin.do")
-	public ModelAndView ajaxLogin(HttpServletRequest request){
+	public ModelAndView ajaxLogin(HttpServletRequest request, HttpSession session){
 		Map<String, Object> hashMap = new HashMap<>();
+		MemberVO mVO = new MemberVO();
+		
 		String id = request.getParameter("userId");
 		String pw = request.getParameter("userPw");
-		System.out.println(id +" "+pw);
-		hashMap.put("id", id);
-		hashMap.put("pw", pw);
+		String userKind = request.getParameter("userKind");
+		if (userKind.equals("member")) {
+			MemberVO inVO = new MemberVO();
+			inVO.setMId(id);
+			inVO.setMPw(pw);
+			mVO = memberService.memberLogin(inVO);
+			hashMap.put("member", mVO);
+		}else if(userKind.equals("trainer")) {
+			
+		}else if(userKind.equals("owner")){
+			
+		}else {
+			
+		}
+		
+		System.out.println(mVO.getMId() +" "+mVO.getMPw()+" "+userKind);
+		
 		ModelAndView model = new ModelAndView("jsonView");
 		model.addObject("user",hashMap);
 		return model;

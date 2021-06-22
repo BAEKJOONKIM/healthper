@@ -19,14 +19,14 @@
 		var pw = $("#userPw").val();
 		var userKind = $('[name="userKind"]').val();
 		var urls = "";
-		if (userKind == "user"){urls = "./userLogin.do";}
-		else if(userKind == "trainer"){urls = "./trainerLogin.do";}
-		else{urls = "./ownerLogin.do";}
+	//	if (userKind == "member"){urls = "./memberLogin.do";}
+	//	else if(userKind == "trainer"){urls = "./trainerLogin.do";}
+	//	else{urls = "./ownerLogin.do";}
 		console.log(urls);
 		$.ajax({
-			url : urls,
+			url : "./ajaxLogin.do",//urls,
 			type : 'POST',
-			data : {"userId" : id, "userPw" : pw},
+			data : {userId : id, userPw : pw, userKind: userKind},
 			success : function(data){
 				console.log(data);
 			}
@@ -108,7 +108,7 @@
         	</colgroup>
         	<tr>
         		<td>
-        			<input type="radio" name="userKind" value="user" checked="checked"/><label for="">회원</label>
+        			<input type="radio" name="userKind" value="member" checked="checked"/><label for="">회원</label>
         			<input type="radio" name="userKind" value="trainer"/><label for="">트레이너</label>
         			<input type="radio" name="userKind" value="owner"/><label for="">관장</label>
         		</td>
