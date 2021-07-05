@@ -100,7 +100,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" onclick="modalLogin()">로그인</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnLoginClose">Close</button>
       </div>
     </div>
   </div>
