@@ -6,30 +6,29 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
-	$(".tCard").click(function(){
-		$('#content').empty();
-		$("#content").load("/test/trainerDetail.do");
+	$(".cCard").click(function(){
+		$('#content').load('/test/centerDetail.do');
 	});
 </script>
 </head>
 <body>
-<div class="row" id="trainerContent" style="margin-left:50px">
+<div class="row" id="centerContent"style="margin-left:50px">
 <div class="row">
-	<table style="width:280px">
+<table style="width:200px">
 		<tbody>
 			<tr>
 				<th>이문동</th>
-				<td>에서 활동하는 동네형입니다.</td>
+				<td>의 헬스장입니다.</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 <div class="row" style="height:20px"></div>
 <div class="row">
-<div class="col-9" id="lists">
-<div class="row" id="">
+<div class="col-9">
+<div class="row">
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
-	<div class="card tCard" style="width: 18rem;">
+	<div class="card cCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -47,7 +46,7 @@
 	</div>
 	</div>
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
-	<div class="card tCard" style="width: 18rem;">
+	<div class="card cCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -65,7 +64,7 @@
 	</div>
 	</div>
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
-	<div class="card tCard" style="width: 18rem;">
+	<div class="card cCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -83,7 +82,7 @@
 	</div>
 	</div>
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
-	<div class="card tCart" style="width: 18rem;">
+	<div class="card cCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -101,7 +100,7 @@
 	</div>
 	</div>
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
-	<div class="card tCard" style="width: 18rem;">
+	<div class="card cCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -118,6 +117,7 @@
   </div>
 	</div>
 	</div>
+	
 </div>
 </div>
 <div class="col-3">

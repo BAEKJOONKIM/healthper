@@ -3,7 +3,11 @@
 <mapper namespace="egovframework.healthper.mapper.MemberMapper">
 	
 	<select id="memberLogin" parameterType="memberVO" resultType="memberVO">
-		SELECT * FROM healthper.MEMBER WHERE M_ID=#{mId} AND M_PW=#{mPw}
+		SELECT * FROM HEALTHPER.MEMBER WHERE M_ID=#{mId} AND M_PW=#{mPw}
+	</select>
+	
+	<select id="memberFindTrainerList" parameterType="trainerVO" resultType="trainerVO">
+		
 	</select>
 	
 </mapper>

@@ -26,8 +26,8 @@
 </div>
 <div class="row" style="height:20px"></div>
 <div class="row">
-<div class="col-9" id="lists">
-<div class="row" id="">
+<div class="col-9">
+<div class="row">
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
 	<div class="card tCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">

@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     var sessionData = localStorage.getItem("sessionUser");
     console.log(JSON.parse(sessionData)); 
@@ -9,17 +10,27 @@ $(document).ready(function(){
 /************  버튼클릭이벤트 *************/
 //트레이너 리스트
 function trainerList(){
-	$("#content").load("./trainerList.do");
+	$("#content").load("./memberTrainerList.do");
 }
 
 //센터 리스트
 function centerList(){
-	$("#content").load("./centerList.do");
+	$("#content").load("./memberCenterList.do");
+}
+
+//스크롤 마지막
+function trainerScrollMax(){
+	var scrollT = $(this).scrollTop();
+	var scrollH = $(this).height();
+	var contentH = $("#content").height();
+	
+	if(scrollT + scrollH + 1 >= contentH){
+		console.log("scrollMax");
+	}
 }
 
 /************ 이벤트 리스너 **************/
 function setEventListener(){
-	$("#btnTrainerList").on("click", trainerList);
-	$("#btnCenterList").on("click", centerList);
+	$("#content").on("scroll" ,trainerScrollMax);
 	
 }
