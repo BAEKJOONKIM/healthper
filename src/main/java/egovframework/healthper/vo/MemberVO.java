@@ -19,11 +19,11 @@ public class MemberVO {
 	private String mType;
 	private String mPlace;
 	private String mDiv;
-	private String mFavorit_g;
-	private String mProfile_url;
+	private String mFavoritG;
+	private String mProfileUrl;
 	private String mMatching;
 	private String mEmail; 
 	private String mEtc;
-	private String mPlace_idx;
+	private String mPlaceIdx;
 	
 }

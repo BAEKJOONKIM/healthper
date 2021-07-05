@@ -87,6 +87,7 @@ public class CommonController {
 				model.addObject("member", mVO);
 				model.addObject("isLogin", "S");
 				model.addObject("userKind", "M");
+				session.setAttribute("sessionUser", mVO);
 			}else {
 				model.addObject("isLogin", "F");
 			}
