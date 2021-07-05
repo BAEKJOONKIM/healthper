@@ -10,6 +10,8 @@ public class MemberController {
 	
 	@RequestMapping("/memberLogin.do")
 	public String userLogin(HttpServletRequest request) {
-		return "userPage";
+		return "/member/memberMain";
 	}
+	
+	
 }

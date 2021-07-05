@@ -7,9 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-
-</script>
+<script src='<c:url value="/resources/js/member/memberMain.js"/>'></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
 <body>
@@ -19,8 +17,8 @@
 		<table style="width:100%;text-align:center;">
 			<tbody>
 				<tr>
-					<td style="padding-left:"><input type="button" value="트레이너" onclick="trainerList()"/></td>
-					<td><input type="button" value="헬스장" onclick="centerList()"/></td>
+					<td style="padding-left:"><input type="button" value="트레이너" id="btnTrainerList"/></td>
+					<td><input type="button" value="헬스장" value="btnCenterList"/></td>
 				</tr>
 			</tbody>
 		</table>
@@ -41,8 +39,8 @@
 							<table style="text-align:right;"> 
 								<tbody>
 									<tr>
-										<td><input type="button" value="로그인" data-bs-toggle="modal" data-bs-target="#exampleModal"/></td>
-										<td><input type="button" value="트레이너등록" /></td>
+										<td><span type="text" id="bannerUserName"></span></td>
+										<td></td>
 									</tr>
 								</tbody>
 							</table> 

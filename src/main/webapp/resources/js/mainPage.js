@@ -20,6 +20,9 @@ function modalLogin(){
 		success : function(data){
 			console.log(data);
 			if(data.isLogin == "S"){
+				console.log(data.sessionUser);
+				localStorage.setItem("sessionUser", JSON.stringify(data.sessionUser));
+				window.location.href="/healthper/memberLogin.do" 
 				console.log('로그인성공');
 				$("#btnLoginClose").click();
 			}else{

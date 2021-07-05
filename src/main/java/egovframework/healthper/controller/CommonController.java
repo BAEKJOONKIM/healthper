@@ -84,10 +84,9 @@ public class CommonController {
 			inVO.setMPw(pw);
 			mVO = memberService.memberLogin(inVO);
 			if(mVO != null) {
-				model.addObject("member", mVO);
+				model.addObject("sessionUser", mVO);
 				model.addObject("isLogin", "S");
 				model.addObject("userKind", "M");
-				session.setAttribute("sessionUser", mVO);
 			}else {
 				model.addObject("isLogin", "F");
 			}
@@ -101,8 +100,6 @@ public class CommonController {
 		
 		System.out.println(mVO.getMId() +" "+mVO.getMPw()+" "+userKind);
 		
-		
-		//model.addObject("user",hashMap);
 		return model;
 	}
 	
