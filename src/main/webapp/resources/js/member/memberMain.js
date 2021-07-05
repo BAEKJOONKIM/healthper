@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-    var sessionData = localStorage.getItem("sessionUser");
-    console.log(JSON.parse(sessionData)); 
+    var sessionData = JSON.parse(localStorage.getItem("sessionUser"));
+    console.log(sessionData); 
     $("#bannerUserName").text(sessionData.mid + "님 안녕하세요");
     
     setEventListener();

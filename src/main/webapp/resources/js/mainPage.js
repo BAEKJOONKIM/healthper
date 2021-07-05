@@ -36,7 +36,6 @@ function modalLogin(){
 				console.log(data.sessionUser);
 				localStorage.setItem("sessionUser", JSON.stringify(data.sessionUser));
 				window.location.href="/healthper/memberLogin.do" 
-				console.log('로그인성공');
 				$("#btnLoginClose").click();
 			}else{
 				alert("아이디와 비밀번호를 확인해주세요");
