@@ -23,6 +23,7 @@ public class TrainerVO {
 	private String mEmail; 
 	private String mEtc;
 	private String mPlaceIdx;
+	private String tmp;
 	
 	private int currentPage;
 	
