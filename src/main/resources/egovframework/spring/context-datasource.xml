@@ -39,9 +39,9 @@
     <!-- mariadb용  -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     	<property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
-    	<property name="url" value="jdbc:mariadb://127.0.0.1:3306/test"></property>
-    	<property name="username" value="root"></property>
-    	<property name="password" value="root"></property>
+    	<property name="url" value="jdbc:mariadb://13.125.155.209:3306/test"></property>
+    	<property name="username" value="hp"></property>
+    	<property name="password" value="hp"></property>
     </bean>
     
 </beans>
