@@ -23,9 +23,10 @@ function memberPage(){
 function modalLogin(){
 	var id = $("#userId").val();
 	var pw = $("#userPw").val();
-	var userKind = $('[name="userKind"]').val();
+	var userKind = $('[name="userKind"]:checked').val();
 	var urls = "";
 	console.log(urls);
+	console.log(userKind);
 	$.ajax({
 		url : "./ajaxLogin.do",
 		type : 'POST',
@@ -35,7 +36,13 @@ function modalLogin(){
 			if(data.isLogin == "S"){
 				console.log(data.sessionUser);
 				localStorage.setItem("sessionUser", JSON.stringify(data.sessionUser));
-				window.location.href="/healthper/memberLogin.do" 
+				if(data.userKind == "M"){
+					window.location.href="/healthper/memberLogin.do";
+				}else if(data.userKind == "T"){
+					window.location.href="/healthper/trainerLogin.do";
+				}else if(data.userKing == "O"){
+				
+				}
 				$("#btnLoginClose").click();
 			}else{
 				alert("아이디와 비밀번호를 확인해주세요");

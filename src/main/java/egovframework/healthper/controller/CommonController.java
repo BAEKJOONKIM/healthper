@@ -16,6 +16,7 @@ import egovframework.healthper.service.OwnerService;
 import egovframework.healthper.service.TrainerService;
 import egovframework.healthper.service.MemberService;
 import egovframework.healthper.vo.MemberVO;
+import egovframework.healthper.vo.TrainerVO;
 
 @Controller
 public class CommonController {
@@ -69,10 +70,10 @@ public class CommonController {
 	
 	
 	@RequestMapping("/ajaxLogin.do")
-	public ModelAndView ajaxLogin(HttpServletRequest request, HttpSession session){
+	public ModelAndView ajaxLogin(HttpServletRequest request, HttpSession session) throws Exception{
 		Map<String, Object> hashMap = new HashMap<>();
 		MemberVO mVO = new MemberVO();
-		
+		TrainerVO tVO = new TrainerVO();
 		ModelAndView model = new ModelAndView("jsonView");
 		
 		String id = request.getParameter("userId");
@@ -91,7 +92,17 @@ public class CommonController {
 				model.addObject("isLogin", "F");
 			}
 		}else if(userKind.equals("trainer")) {
-			
+			TrainerVO inVO = new TrainerVO();
+			inVO.setMId(id);
+			inVO.setMPw(pw);
+			tVO = trainerService.trainerLogin(inVO);
+			if(tVO != null) {
+				model.addObject("sessionUser", tVO);
+				model.addObject("isLogin", "S");
+				model.addObject("userKind", "T");
+			}else {
+				model.addObject("isLogin", "F");
+			}
 		}else if(userKind.equals("owner")){
 			
 		}else {
