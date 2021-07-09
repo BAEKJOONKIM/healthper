@@ -2,6 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="egovframework.healthper.mapper.TrainerMapper">
 	
-	
+	<select id="trainerLogin" parameterType="trainerVO" resultType="trainerVO">
+		SELECT * FROM member WHERE M_id=#{mId} AND M_PW=#{mPw} AND M_DIV="T"
+	</select>
 	
 </mapper>

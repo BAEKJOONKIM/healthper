@@ -83,9 +83,9 @@
         	</colgroup>
         	<tr>
         		<td>
-        			<input type="radio" name="userKind" value="member" checked="checked"/><label for="">회원</label>
-        			<input type="radio" name="userKind" value="trainer"/><label for="">트레이너</label>
-        			<input type="radio" name="userKind" value="owner"/><label for="">관장</label>
+        			<input type="radio" id="loginM"  name="userKind" value="member" checked="checked"/><label for="loginM">회원</label>
+        			<input type="radio" id="loginT" name="userKind" value="trainer"/><label for="loginT">트레이너</label>
+        			<input type="radio" id="loginO" name="userKind" value="owner"/><label for="loginO">관장</label>
         		</td>
         	</tr>
         	<tr>

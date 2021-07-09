@@ -17,7 +17,7 @@ public class TrainerController {
 	
 	@RequestMapping("/trainerLogin.do")
 	public String trainerLogin() {
-		return "";
+		return "/trainer/trainerMain";
 	}
 	
 	//트레이너 글등록페이지
