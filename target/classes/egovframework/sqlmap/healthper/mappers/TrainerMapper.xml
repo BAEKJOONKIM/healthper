@@ -6,4 +6,47 @@
 		SELECT * FROM member WHERE M_id=#{mId} AND M_PW=#{mPw} AND M_DIV="T"
 	</select>
 	
+	<!-- 트레이너글 등록 -->
+	<insert id="trainerWriteAction" parameterType="boardVO"> 
+		INSERT 
+		  INTO board(
+		       board_content_idx
+		     , board_title
+		     , board_content
+		     , board_click
+		     , board_date
+		     , m_idx
+		<if test="writerImgUrl != null and writerImgUrl != ''">
+		     , writer_img_url
+		</if>
+		     , board_sum
+		     , writer_name
+		     , writer_div
+		     , writer_area_idx
+		     , writer_center_idx
+		     , writer_open
+		     , board_priority
+		     , board_name
+		     , board_cat_idx)
+        VALUES (
+               (SELECT COUNT(*) + 1 FROM board)
+             , #{boardTitle}
+             , #{boardContent}
+             , 0
+             , SYSDATE
+             , #{mIdx}
+        <if test="writerImgUrl != null and writerImgUrl != ''">
+             , #{writerImgUrl}
+        </if>
+             , #{boardSum}
+             , #{writerName}
+             , 'T'
+             , #{writerAreaIdx}
+             , #{writerCenterIdx}
+             , #{writerOpen}
+             , 0
+             , '트레이너글'
+             , 1)
+	</insert>
+	
 </mapper>

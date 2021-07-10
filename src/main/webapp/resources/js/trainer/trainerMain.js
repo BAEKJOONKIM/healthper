@@ -4,8 +4,15 @@ $(document).ready(function(){
     console.log(sessionData); 
     $("#bannerUserName").text(sessionData.mid + "님 안녕하세요");
     
+    initTrainerMain();
+    
     setEventListener();
+      
 });
+
+function initTrainerMain(){
+	$("#content").load("./trainerMenu.do");
+}
 
 /************  버튼클릭이벤트 *************/
 //트레이너 리스트

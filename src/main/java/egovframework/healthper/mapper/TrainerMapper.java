@@ -1,5 +1,6 @@
 package egovframework.healthper.mapper;
 
+import egovframework.healthper.vo.BoardVO;
 import egovframework.healthper.vo.TrainerVO;
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 
@@ -10,5 +11,5 @@ public interface TrainerMapper {
 	public TrainerVO trainerLogin(TrainerVO inVO); 
 	
 	//트레이너 글등록
-	public int trainerWrite(TrainerVO inVO);
+	public int trainerWriteAction(BoardVO inVO);
 }
