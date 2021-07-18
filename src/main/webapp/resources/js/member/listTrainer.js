@@ -20,7 +20,6 @@ function centerList(){
 
 /************ 이벤트 리스너 **************/
 function setEventListener(){
-	//$("#btnTrainerList").on("click", trainerList);
-	//$("#btnCenterList").on("click", centerList);
+	
 	
 }
