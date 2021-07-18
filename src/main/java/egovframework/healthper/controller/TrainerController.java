@@ -37,10 +37,17 @@ public class TrainerController {
 	//트레이너 글등록
 	@RequestMapping("/trainerWriteAction.do")
 	public ModelAndView trainerWriteAction(HttpServletRequest request) throws Exception {
-		ModelAndView model = new ModelAndView();
+		ModelAndView model = new ModelAndView("jsonView");
 		BoardVO inVO = new BoardVO();
-		String result = trainerService.trainerWriteAction(inVO);
+		inVO.setMIdx(request.getParameter("mIdx"));
+		inVO.setBoardTitle(request.getParameter("boardTitle"));
+		inVO.setWriterName(request.getParameter("writerName"));
+		inVO.setBoardContent(request.getParameter("boardContent"));
+		inVO.setWriterAreaIdx(request.getParameter("writerArea"));
+		inVO.setWriterCenterIdx(request.getParameter("writerCenter"));
 		
+		String result = trainerService.trainerWriteAction(inVO);
+		System.out.println("result: "+result);
 		if(result.equals("S")) {
 			model.addObject("result", "S");
 		}else {
@@ -49,7 +56,6 @@ public class TrainerController {
 	
 		return model;
 	}
-	
-	//
+
 	
 }

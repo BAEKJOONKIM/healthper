@@ -18,7 +18,9 @@ public class BoardVO {
 	private String writerName;
 	private String writerDiv;
 	private String writerAreaIdx;
+	private String writerAreaName;
 	private String writerCenterIdx;
+	private String writerCenterName;
 	private String writerOpen;
 	private String boardPriority;
 	private String boardName;

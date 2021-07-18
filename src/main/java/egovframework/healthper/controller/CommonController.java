@@ -68,7 +68,7 @@ public class CommonController {
 		return "/common/loginPage";
 	}
 	
-	
+	//로그인
 	@RequestMapping("/ajaxLogin.do")
 	public ModelAndView ajaxLogin(HttpServletRequest request, HttpSession session) throws Exception{
 		Map<String, Object> hashMap = new HashMap<>();

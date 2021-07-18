@@ -29,16 +29,16 @@
 		     , board_name
 		     , board_cat_idx)
         VALUES (
-               (SELECT COUNT(*) + 1 FROM board)
+               (SELECT COUNT(*) + 1 FROM board A)
              , #{boardTitle}
              , #{boardContent}
              , 0
-             , SYSDATE
+             , NOW()
              , #{mIdx}
         <if test="writerImgUrl != null and writerImgUrl != ''">
              , #{writerImgUrl}
         </if>
-             , #{boardSum}
+             , SUBSTR(#{boardContent}, 1, 50)
              , #{writerName}
              , 'T'
              , #{writerAreaIdx}

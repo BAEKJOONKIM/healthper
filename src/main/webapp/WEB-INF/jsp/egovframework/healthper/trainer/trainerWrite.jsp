@@ -13,6 +13,7 @@
 <div class="row">
 	<div class="col-2"></div>
 	<div class="col-7">
+
 		<table>
 			<colgroup>
 				<col>
@@ -33,7 +34,31 @@
 				</tr>
 				<tr>
 					<th><span>첨부사진: </span></th>
-					<td><input type="file" id=""/><label id="btnFile">사진등록</label></td>
+					<td>
+						<input type="file" id="file" style="display:none"/>
+						<input type="text" id="fileName"/>
+						<label for="file" class="btn btn-primary">사진등록</label>
+					</td>
+				</tr>
+				<tr>
+					<th><span>지역</span></th>
+					<td>
+						<select id="writerArea">
+							<option value="999999">테스트</option>
+						</select>
+					</td>
+					<th><span>센터</span></th>
+					<td>
+						<select id="writerCenter">
+							<option value="99999999">테스트</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<button type="button" id="btnSave">등록</button>
+					</td>
 				</tr>
 			</tbody>
 		</table>

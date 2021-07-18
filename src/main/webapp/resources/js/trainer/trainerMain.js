@@ -1,6 +1,6 @@
-
+var sessionData;
 $(document).ready(function(){
-    var sessionData = JSON.parse(localStorage.getItem("sessionUser"));
+    sessionData = JSON.parse(localStorage.getItem("sessionUser"));
     console.log(sessionData); 
     $("#bannerUserName").text(sessionData.mid + "님 안녕하세요");
     
