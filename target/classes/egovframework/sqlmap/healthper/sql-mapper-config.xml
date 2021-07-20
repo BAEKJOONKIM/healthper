@@ -15,5 +15,6 @@
 		<typeAlias alias="trainerVO" type="egovframework.healthper.vo.TrainerVO"/>
 		<typeAlias alias="ownerVO" type="egovframework.healthper.vo.OwnerVO"/>
     	<typeAlias alias="boardVO" type="egovframework.healthper.vo.BoardVO"/>
+    	<typeAlias alias="commonVO" type="egovframework.healthper.vo.CommonVO"/>
     </typeAliases>
 </configuration>

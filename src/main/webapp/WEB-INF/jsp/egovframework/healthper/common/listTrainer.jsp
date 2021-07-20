@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,7 @@
 		$("#content").load("/test/trainerDetail.do");
 	});
 </script>
+<script src='<c:url value="/resources/js/listTrainer.js"/>'></script>
 </head>
 <body>
 <div class="row" id="trainerContent" style="margin-left:50px">
@@ -28,6 +30,7 @@
 <div class="row">
 <div class="col-9" id="lists">
 <div class="row" id="">
+<div id="commonList"></div>
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
 	<div class="card tCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">

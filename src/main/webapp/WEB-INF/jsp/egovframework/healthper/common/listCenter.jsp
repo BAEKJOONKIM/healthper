@@ -29,6 +29,7 @@
 <div class="row">
 <div class="col-9">
 <div class="row">
+<div id="commonList"></div>
 	<div class="col-4" style="margin-top:20px;margin-bottom:20px">
 	<div class="card cCard" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
