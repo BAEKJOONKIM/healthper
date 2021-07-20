@@ -55,7 +55,7 @@ function scrollMax(){
 
 //이벤트리스너
 function listTrainerEvent(){
-	$("#commonList").on("scrollMax", scrollMax);
+	//$("#commonList").on("scrollMax", scrollMax);
 }
 
 //트레이너글 화면에 추가
